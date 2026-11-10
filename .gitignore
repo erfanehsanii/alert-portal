@@ -1,0 +1,105 @@
+# ==========================================
+# Alert Portal - Git Ignore
+# ==========================================
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Testing and code analysis
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+
+# Environment variables and local configuration
+.env
+.env.*
+!.env.example
+
+# Credentials and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.p8
+*.jks
+*.kubeconfig
+kubeconfig
+credentials.json
+secrets.yaml
+secrets.yml
+*-secret.yaml
+*-secret.yml
+
+# Certificates (review before inclusion)
+*.crt
+*.cer
+
+# Database files and backups
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
+*.bak
+*.sql.gz
+postgres/
+
+# Logs
+*.log
+logs/
+
+# Archives and generated packages
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.whl
+*.egg-info/
+dist/
+build/
+
+# Local editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Alert Portal - Publication exclusions
+# ==========================================
+
+# Production-specific Kubernetes configuration
+# Keep excluded until reviewed and sanitized.
+deploy/
+helm/
+
+# Accidental empty file identified during audit
+/touch
+
+# Internal deployment documentation
+# Excluded until generic documentation is prepared.
+LDAP-DEPLOYMENT.md
+MATTERMOST-DESTINATIONS.md
+
+# Historical development reports
+# These describe older builds and test results.
+# Retain locally, but exclude from GitHub publication.
+/REBUILD-REPORT.md
+/TEST-RESULTS.md
